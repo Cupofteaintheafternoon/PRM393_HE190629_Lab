@@ -60,7 +60,7 @@ void main() async {
  bool check = (sum == 30) && (numbers.length > 2);
  print("Sum is $sum. Check passed: ${check ? 'Yes' : 'No'}");
 
- Set<String> items = {"Pen", "Notebook"};
+ Set<String> items = {"pen", "notebook"};
  items.add("eraser");
  items.remove("pen");
  print("Set: $items");
@@ -98,7 +98,6 @@ void main() async {
  }
 
  food.forEach((pet) => print("forEach loop: $pet"));
-
  printNormal();
  printArrow();
  print("");

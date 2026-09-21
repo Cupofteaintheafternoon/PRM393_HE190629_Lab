@@ -127,8 +127,6 @@ Future<void> main() async {
   // Requesting two instances
   Settings config1 = Settings();
   Settings config2 = Settings();
-
-  // Verifying they point to the exact same object in memory
   bool isSame = identical(config1, config2);
   print("Are config1 and config2 the same instance? $isSame");
 }
