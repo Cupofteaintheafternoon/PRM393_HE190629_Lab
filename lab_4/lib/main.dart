@@ -8,7 +8,6 @@ import 'scaffold_theme_demo.dart';
 
 void main() => runApp(const Lab4App());
 
-/// Launcher that lets you open each of the five exercises.
 class Lab4App extends StatelessWidget {
   const Lab4App({super.key});
 

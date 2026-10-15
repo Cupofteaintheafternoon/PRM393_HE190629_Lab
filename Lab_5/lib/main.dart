@@ -210,7 +210,6 @@ class MovieCard extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       margin: const EdgeInsets.only(bottom: 12),
       child: InkWell(
-        // Navigator.pushNamed + pass the Movie object as an argument.
         onTap: () => Navigator.pushNamed(context, '/detail', arguments: movie),
         child: Row(
           children: [

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 /// Exercise 1 – Core Widgets: Text, Image, Icon, Card, ListTile
 class CoreWidgetsDemo extends StatelessWidget {
   const CoreWidgetsDemo({super.key});
@@ -21,8 +20,6 @@ class CoreWidgetsDemo extends StatelessWidget {
                   ),
             ),
             const SizedBox(height: 8),
-
-            // An Icon using Material Icons (inside a Row with text)
             const Row(
               children: [
                 Icon(Icons.movie_filter, color: Colors.deepPurple, size: 32),
@@ -31,12 +28,10 @@ class CoreWidgetsDemo extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 16),
-
-            // An Image.network() with rounded corners, loading & error states
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.network(
-                'https://picsum.photos/id/1015/800/400',
+                'https://tse4.mm.bing.net/th/id/OIP.RvWI9o-24V4byAJE00rdjwHaE6?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
                 height: 200,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -53,8 +48,6 @@ class CoreWidgetsDemo extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-
-            // A Card containing a ListTile
             Card(
               elevation: 3,
               shape: RoundedRectangleBorder(

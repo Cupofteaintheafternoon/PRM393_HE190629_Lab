@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 /// Exercise 2 – Input Widgets: Slider, Switch, RadioListTile, DatePicker
 class InputControlsDemo extends StatefulWidget {
   const InputControlsDemo({super.key});
@@ -15,9 +14,6 @@ class _InputControlsDemoState extends State<InputControlsDemo> {
   bool _subtitles = true; // Switch value
   Format _format = Format.twoD; // Radio group value
   DateTime? _date; // Picked date
-
-  // Called from inside the State's build tree, so `context` is valid
-  // (this is the fix for the "DatePicker context" error in Exercise 5).
   Future<void> _pickDate() async {
     final picked = await showDatePicker(
       context: context,
@@ -26,7 +22,6 @@ class _InputControlsDemoState extends State<InputControlsDemo> {
       lastDate: DateTime(2100),
     );
     if (picked != null) {
-      // setState tells Flutter to rebuild so the new value is displayed.
       setState(() => _date = picked);
     }
   }

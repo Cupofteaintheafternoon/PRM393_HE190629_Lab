@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 /// Exercise 3 – Layout Basics: Column, Row, Padding, ListView
 class LayoutBasicsDemo extends StatelessWidget {
   const LayoutBasicsDemo({super.key});
@@ -19,13 +18,11 @@ class LayoutBasicsDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Ex 3 – Layout Basics')),
-      // Column creates vertical sections; Padding gives a consistent 16px gutter.
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Section 1: header Row
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -36,7 +33,6 @@ class LayoutBasicsDemo extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 16),
-
             // Section 2: stats Row
             Row(
               children: const [
@@ -48,13 +44,10 @@ class LayoutBasicsDemo extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 16),
-
             // Section 3: title + list
             const Text('Top Rated',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
             const SizedBox(height: 8),
-
-            // ListView inside a Column MUST be wrapped in Expanded.
             Expanded(
               child: ListView.builder(
                 itemCount: _movies.length,

@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-
 /// Exercise 4 – App Structure with Scaffold, AppBar, FAB & Theme
-///
-/// Runs as its own mini-app so that it can own the ThemeData / themeMode
-/// (Dark Mode toggle).
 class ScaffoldThemeDemo extends StatefulWidget {
   const ScaffoldThemeDemo({super.key});
 
@@ -19,7 +15,6 @@ class _ScaffoldThemeDemoState extends State<ScaffoldThemeDemo> {
 
   @override
   Widget build(BuildContext outerContext) {
-    // Nested MaterialApp so this exercise has its own light/dark themes.
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: _themeMode,
@@ -43,8 +38,6 @@ class _ScaffoldThemeDemoState extends State<ScaffoldThemeDemo> {
             title: const Text('Ex 4 – Scaffold & Theme'),
             leading: IconButton(
               icon: const Icon(Icons.arrow_back),
-              // `outerContext` belongs to the launcher's Navigator (above this
-              // nested MaterialApp), so popping with it returns to the menu.
               onPressed: () => Navigator.of(outerContext).pop(),
             ),
             actions: [
